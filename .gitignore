@@ -1,0 +1,6 @@
+
+*.json
+bin/compiler.out
+bin/Debug/main.out
+bin/Debug/String.o
+Headers/String.o
