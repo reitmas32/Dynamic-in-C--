@@ -6,31 +6,31 @@
 using namespace std;
 
 class Dynamic{
-    private:
-        void* data;
-        string type;
+    void* data;
     public:
-        Dynamic();
-        Dynamic(void* dynamic);
-        Dynamic(bool dynamic);
-        Dynamic(char dynamic);
-        Dynamic(int dynamic);
-        Dynamic(size_t dynamic);
-        Dynamic(double dynamic);
-        Dynamic(float dynamic);
+        void operator=(const float s){
+            data=(void*)&s;
+        }
+        void operator=(const int p){
+            data=(void*)&p;
+        }
 
-        string getType();
+        void operator=(const string p){
+            data=(void*)&p;
+        }
 
-        void setData(void* dynamic);
-        void setData(bool dynamic);
-        void setData(char dynamic);
-        void setData(int dynamic);
-        void setData(size_t dynamic);
-        void setData(double dynamic);
-        void setData(float dynamic);
+        int toInt(){
+            return (*(int*)data);
+        }
+        float toFloat(){
+            return (*(float*)data);
+        }
 
+        string toString(){
+            return (*(string*)data);
+        }
 
-        ~Dynamic();
 };
+
 
 #endif

@@ -2,34 +2,9 @@
 
 #include <string>
 
+#include "../../Headers/include/Dynamic.hpp"
+
 using namespace std;
-
-class Dynamic{
-    void* data;
-    public:
-        void operator=(const float s){
-            data=(void*)&s;
-        }
-        void operator=(const int p){
-            data=(void*)&p;
-        }
-
-        void operator=(const string p){
-            data=(void*)&p;
-        }
-
-        int getInt(){
-            return (*(int*)data);
-        }
-        float getFloat(){
-            return (*(float*)data);
-        }
-
-        string getString(){
-            return (*(string*)data);
-        }
-
-};
 
 
 int main(int argc, char const *argv[])
@@ -38,16 +13,16 @@ int main(int argc, char const *argv[])
 
     m = 5;
 
-    cout<<m.getInt()<<endl;
+    cout<<m.toInt()<<endl;
 
     m = 4.8f;
 
-    cout<<m.getFloat()<<endl;
+    cout<<m.toFloat()<<endl;
 
 
     m = "jajajaja";
     
-    cout<<m.getString()<<endl;
+    cout<<m.toString()<<endl;
 
     return 0;
 }
