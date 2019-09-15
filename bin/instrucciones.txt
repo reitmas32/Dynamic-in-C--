@@ -1,1 +1,1 @@
-g++ -Wall -std=c++17 -o Debug/main.out Debug/String.o ../Sources/src/main.cpp
+g++ -Wall -std=c++17 -o  Debug/main.out ../Sources/src/main.cpp

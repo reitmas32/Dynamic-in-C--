@@ -25,8 +25,8 @@ int main(int argc, char const *argv[])
     cout<<m.toString()<<endl;*/
 
     m = true;
-    
-    cout<<m.toBool()<<endl;
+    m = "jajajaja";
+    cout<<m.toString()<<endl;
 
     return 0;
 }
