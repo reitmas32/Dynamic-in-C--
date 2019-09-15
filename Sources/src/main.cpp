@@ -18,11 +18,15 @@ int main(int argc, char const *argv[])
     m = 4.8f;
 
     cout<<m.toFloat()<<endl;
-
+/*
 
     m = "jajajaja";
     
-    cout<<m.toString()<<endl;
+    cout<<m.toString()<<endl;*/
+
+    m = true;
+    
+    cout<<m.toBool()<<endl;
 
     return 0;
 }
